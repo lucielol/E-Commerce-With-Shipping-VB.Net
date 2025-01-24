@@ -31,12 +31,12 @@ Partial Class AdminForm
         AddButton = New Button()
         RemoveButton = New Button()
         ListProducts = New DataGridView()
-        UpdateButton = New Button()
         id = New DataGridViewTextBoxColumn()
         no = New DataGridViewTextBoxColumn()
         product_name = New DataGridViewTextBoxColumn()
         price = New DataGridViewTextBoxColumn()
         stock = New DataGridViewTextBoxColumn()
+        UpdateButton = New Button()
         CType(ListProducts, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -124,15 +124,6 @@ Partial Class AdminForm
         ListProducts.Size = New Size(679, 263)
         ListProducts.TabIndex = 9
         ' 
-        ' UpdateButton
-        ' 
-        UpdateButton.Location = New Point(407, 178)
-        UpdateButton.Name = "UpdateButton"
-        UpdateButton.Size = New Size(152, 42)
-        UpdateButton.TabIndex = 10
-        UpdateButton.Text = "Update"
-        UpdateButton.UseVisualStyleBackColor = True
-        ' 
         ' id
         ' 
         id.HeaderText = "Id"
@@ -167,6 +158,15 @@ Partial Class AdminForm
         stock.HeaderText = "Stok"
         stock.MinimumWidth = 8
         stock.Name = "stock"
+        ' 
+        ' UpdateButton
+        ' 
+        UpdateButton.Location = New Point(407, 178)
+        UpdateButton.Name = "UpdateButton"
+        UpdateButton.Size = New Size(152, 42)
+        UpdateButton.TabIndex = 10
+        UpdateButton.Text = "Update"
+        UpdateButton.UseVisualStyleBackColor = True
         ' 
         ' AdminForm
         ' 

@@ -46,16 +46,17 @@ Public Class AdminForm
                 Dim selectedRow As DataGridViewRow = ListProducts.Rows(e.RowIndex)
                 Dim countSelected As Integer = ListProducts.SelectedRows.Count
 
+                UpdateButton.Enabled = (countSelected = 1)
+
                 If countSelected = 1 Then
                     ProductNameBox.Text = selectedRow.Cells("product_name").Value.ToString()
                     PriceBox.Text = selectedRow.Cells("price").Value.ToString()
                     StockBox.Text = selectedRow.Cells("stock").Value.ToString()
 
-                    CheckUpdateButton()
+                    CheckRemoveButton()
                 Else
                     ClearInputs()
                 End If
-
             End If
         Catch ex As Exception
             MessageBox.Show("Produk tidak ditemukan: ", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)

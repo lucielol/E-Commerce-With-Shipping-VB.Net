@@ -74,12 +74,9 @@ Partial Class Main
         PrintPreviewToolStripButton = New ToolStripButton()
         ToolStripSeparator2 = New ToolStripSeparator()
         HelpToolStripButton = New ToolStripButton()
-        StatusStrip = New StatusStrip()
-        ToolStripProgressBar1 = New ToolStripProgressBar()
         ToolTip = New ToolTip(components)
         MenuStrip.SuspendLayout()
         ToolStrip.SuspendLayout()
-        StatusStrip.SuspendLayout()
         SuspendLayout()
         ' 
         ' MenuStrip
@@ -445,22 +442,6 @@ Partial Class Main
         HelpToolStripButton.Size = New Size(34, 28)
         HelpToolStripButton.Text = "Help"
         ' 
-        ' StatusStrip
-        ' 
-        StatusStrip.ImageScalingSize = New Size(24, 24)
-        StatusStrip.Items.AddRange(New ToolStripItem() {ToolStripProgressBar1})
-        StatusStrip.Location = New Point(0, 660)
-        StatusStrip.Name = "StatusStrip"
-        StatusStrip.Padding = New Padding(2, 0, 23, 0)
-        StatusStrip.Size = New Size(789, 28)
-        StatusStrip.TabIndex = 7
-        StatusStrip.Text = "StatusStrip"
-        ' 
-        ' ToolStripProgressBar1
-        ' 
-        ToolStripProgressBar1.Name = "ToolStripProgressBar1"
-        ToolStripProgressBar1.Size = New Size(100, 20)
-        ' 
         ' Main
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -468,7 +449,7 @@ Partial Class Main
         ClientSize = New Size(789, 688)
         Controls.Add(ToolStrip)
         Controls.Add(MenuStrip)
-        Controls.Add(StatusStrip)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         IsMdiContainer = True
         MainMenuStrip = MenuStrip
         Margin = New Padding(5, 6, 5, 6)
@@ -480,8 +461,6 @@ Partial Class Main
         MenuStrip.PerformLayout()
         ToolStrip.ResumeLayout(False)
         ToolStrip.PerformLayout()
-        StatusStrip.ResumeLayout(False)
-        StatusStrip.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
 
@@ -505,7 +484,6 @@ Partial Class Main
     Friend WithEvents PrintPreviewToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolTip As System.Windows.Forms.ToolTip
     Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
     Friend WithEvents PrintToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents NewToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStrip As System.Windows.Forms.ToolStrip
@@ -538,6 +516,5 @@ Partial Class Main
     Friend WithEvents ToolBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatusBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolsMenu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
 
 End Class
